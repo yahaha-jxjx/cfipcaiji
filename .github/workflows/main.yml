@@ -1,8 +1,8 @@
 name: Update IP List
 
 on:
-  #schedule:
-    #- cron: '0 */3 * * *' # 每3小时运行一次
+  schedule:
+    - cron: '0 */3 * * *' # 每3小时运行一次
   workflow_dispatch: # 允许手动触发
   #push: # 允许提交触发
 
@@ -30,8 +30,8 @@ jobs:
         
     - name: Commit and push changes
       run: |
-        git config --global user.email "tianshideyou@proton.me"
-        git config --global user.name "tianshipapa"
+        git config --global user.email "aivujx@qq.com"
+        git config --global user.name "yahaha-jxjx"
         if [ -n "$(git status --porcelain)" ]; then
           git add ip.txt
           git commit -m "Automatic update"
